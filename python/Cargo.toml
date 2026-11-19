@@ -1,0 +1,19 @@
+[package]
+name = "androxide-py"
+version = "0.1.3"
+edition = "2024"
+description = "PyO3 bindings for androxide (the androxide Python package)"
+license = "Apache-2.0"
+repository = "https://github.com/appknox/androxide"
+publish = false
+
+[lib]
+name = "androxide"
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.104"
+androxide-core = { path = "../core" }
+dex-bytecode = { path = "../vendor/dex-bytecode" }
+rustc-hash = "2.1.3"
+pyo3 = { version = "0.30.1", features = ["extension-module", "abi3-py310"] }
